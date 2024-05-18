@@ -18,6 +18,17 @@
                     {{ partial "social-icons.html" . }}
                 </div>
             {{- end }}
+            <nav class="menu">
+    <ul class="menu__inner">
+        {{- $currentPage := . -}}
+        {{ range .Site.Menus.main -}}
+            <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+        {{- end }}
+                </div>
+            </li>
+        </div>      
+    </ul>
+</nav>
         </div>
     </main>
 {{ end }}
